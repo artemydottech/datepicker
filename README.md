@@ -1,5 +1,7 @@
 # daterly
 
+![daterly](docs/public/og.png)
+
 [![npm version](https://img.shields.io/npm/v/daterly?color=blue)](https://www.npmjs.com/package/daterly)
 [![npm downloads](https://img.shields.io/npm/dm/daterly?color=green)](https://www.npmjs.com/package/daterly)
 [![CI](https://github.com/artemydottech/daterly/actions/workflows/ci.yml/badge.svg)](https://github.com/artemydottech/daterly/actions/workflows/ci.yml)
