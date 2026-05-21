@@ -7,10 +7,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```bash
 npm run build          # compile with tsup → dist/
 npm run dev            # watch mode
-npm run storybook      # dev server at localhost:6006
 npm run test           # vitest
 npm run test:coverage  # vitest --coverage
-npm run release        # build + changeset publish
+npm run test:e2e       # playwright component tests
+npm run size           # bundle size check (size-limit)
+npm -w docs run dev    # docs site (Next.js)
+npm run release        # build + changeset publish + git tag
 ```
 
 ## Architecture

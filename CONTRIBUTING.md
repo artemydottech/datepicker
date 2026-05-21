@@ -16,14 +16,19 @@ cd daterly
 npm install
 ```
 
+Репозиторий — npm-workspace: корень (библиотека) и `docs/` (сайт документации на Next.js).
+
 ### Команды
 
 ```bash
-npm run storybook      # dev-сервер документации на localhost:6006
-npm run dev            # watch-сборка библиотеки
-npm run test           # запуск тестов (vitest)
+npm run dev            # watch-сборка библиотеки → dist/
+npm run test           # тесты (vitest)
+npm run test:watch     # тесты в watch-режиме
 npm run test:coverage  # тесты с покрытием
+npm run test:e2e       # e2e-тесты компонентов (playwright)
 npm run build          # production-сборка → dist/
+npm run size           # замер размера бандла (size-limit)
+npm -w docs run dev    # локальный сайт документации
 ```
 
 ### Процесс отправки PR
@@ -32,8 +37,8 @@ npm run build          # production-сборка → dist/
    ```bash
    git checkout -b fix/my-bug-fix
    ```
-2. Внесите изменения. Если это новая функциональность — добавьте Story в Storybook.
-3. Убедитесь, что тесты проходят: `npm run test`.
+2. Внесите изменения. Новую функциональность покройте тестами; при изменении API обновите документацию в `docs/`.
+3. Убедитесь, что тесты проходят: `npm run test` (и `npm run test:e2e`, если затронуты компоненты).
 4. Откройте Pull Request с описанием что и зачем изменено.
 
 ### Стиль коммитов
@@ -64,14 +69,19 @@ cd daterly
 npm install
 ```
 
+The repository is an npm workspace: the root (library) and `docs/` (the Next.js documentation site).
+
 ### Scripts
 
 ```bash
-npm run storybook      # documentation dev server at localhost:6006
-npm run dev            # library watch build
+npm run dev            # library watch build → dist/
 npm run test           # run tests (vitest)
+npm run test:watch     # tests in watch mode
 npm run test:coverage  # tests with coverage
+npm run test:e2e       # component e2e tests (playwright)
 npm run build          # production build → dist/
+npm run size           # bundle size check (size-limit)
+npm -w docs run dev    # documentation site locally
 ```
 
 ### Submitting a PR
@@ -80,8 +90,8 @@ npm run build          # production build → dist/
    ```bash
    git checkout -b fix/my-bug-fix
    ```
-2. Make your changes. For new features, add a Story to Storybook.
-3. Make sure tests pass: `npm run test`.
+2. Make your changes. Cover new features with tests; update the docs in `docs/` when the API changes.
+3. Make sure tests pass: `npm run test` (and `npm run test:e2e` if components are affected).
 4. Open a Pull Request describing what changed and why.
 
 ### Commit style
